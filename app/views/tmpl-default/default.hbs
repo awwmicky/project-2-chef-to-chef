@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="[160 max-char]">
+    <meta name="author" content="[developer name]">
+    <title>{{ title }}</title>
+    {{!-- Icon --}}
+    <link rel="shortcut icon" type="image/x-icon" href="/images/icons/favicon.ico">
+    <link rel="apple-touch-icon" type="image/png" href="/images/icons/favicon-alt.png">
+    <link rel="icon" sizes="192x192" type="image/png" href="/images/icons/favicon-alt.png">
+    {{!-- Font Awesome --}}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    {{!-- CSS/ --}}
+    <link rel="stylesheet" type="text/css" href="/CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/parts/header.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/parts/footer.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/{{ style }}">
+</head>
+
+<body>
+
+    {{> header }}
+    {{{ body }}}
+    {{> footer }}
+
+    {{!-- JQuery --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    {{!-- JS/ --}}
+    <script type="text/javascript" src="/JS/app.js"></script>
+    <script type="text/javascript" src="/JS/{{ script }}"></script>
+</body>
+
+</html>
+{{!--  --}}

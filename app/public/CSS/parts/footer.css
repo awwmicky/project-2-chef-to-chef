@@ -1,0 +1,78 @@
+footer {
+    background: gray;
+    width: 100%;
+    margin-top: auto;
+    /* color: white; */
+}
+footer .container-wrapper {
+    border: 2px solid black;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    max-width: 960px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.project-title-sm a {
+    cursor: alias;
+    /* font-family: ; */
+    color: white;
+}
+.project-title-sm a:active {
+    color: black;
+}
+.github-link {
+    border: 2px solid gold;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+    .github-link h4 {
+        color: white;
+    }
+    .github-link i {
+        border: 2px solid black;
+        border-radius: 1.5em;
+        color: white;
+    }
+    .github-link i:hover {
+        border: 2px solid white;
+        border-radius: 1.5em;
+        color: purple;
+    }
+.contribution-members {
+    border: 2px solid blue;
+    width: 100%;
+}
+    .contribution-members h5 {
+        color: white;
+        text-align: center;
+    }
+    .contribution-members nav {
+        border: 2px solid lightblue;
+        width: 100%;
+    }
+        .contribution-members ul {
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-evenly;
+        }
+        .contribution-members li {
+            padding: 0 15px;
+        }
+        .contribution-members a {
+            text-decoration: none;
+            color: white;
+        }
+        .contribution-members a:hover {
+            color: red;
+        }
+        .contribution-members a:active {
+            color: blue;
+        }
+.team-chef {
+    color: white;
+}
+/*  */
