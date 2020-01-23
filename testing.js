@@ -18,8 +18,8 @@ db.sequelize.authenticate()
 
 db.sequelize.sync().then(() => {
     /*  */
-    findAllChef()
-    // createManyChef()
+    // findAllChef()
+    createManyChef()
 
     /*  */
 }).catch((err) => console.log(err))
