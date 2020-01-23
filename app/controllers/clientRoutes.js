@@ -18,20 +18,32 @@ router.get('/add-chef', (req, res) => {
 
     res.render(
         'add-chef.hbs', {
-            title: 'Add Chef Page',
-            style: 'add-chef.css',
-            script: 'add-chef.js'
-        }
+        title: 'Add Chef Page',
+        style: 'add-chef.css',
+        script: 'add-chef.js'
+    }
     )
 })
 
 router.get("/chef-listing", (req, res) => {
     res.render(
         "chef-listing.hbs", {
-            title: 'Chef listing page',
-            style: 'chef-listing.css',
-            script: 'chef-listing.js'
-        }
+        title: 'Chef listing page',
+        style: 'chef-listing.css',
+        script: 'chef-listing.js'
+    }
+    )
+})
+
+router.get('/login', (req, res) => {
+    console.log('- Login Page -')
+
+    res.render(
+        'login.hbs', {
+        title: 'Login Page',
+        style: 'login.css',
+        script: 'login.js'
+    }
     )
 })
 
