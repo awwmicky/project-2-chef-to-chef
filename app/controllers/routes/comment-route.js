@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const {
+    comment
+} = require('../../models');
 // const comment = require("../../database/models").comment
 // const User = require("../../database/models").User
 
