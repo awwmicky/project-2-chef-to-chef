@@ -1,7 +1,7 @@
 {
   "name": "project-2",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Team Members:",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/awwmicky/project-2-pineapple-cakes/issues"
   },
-  "homepage": "https://github.com/awwmicky/project-2-pineapple-cakes#readme"
+  "homepage": "https://github.com/awwmicky/project-2-pineapple-cakes#readme",
+  "directories": {
+    "doc": "docs"
+  }
 }
