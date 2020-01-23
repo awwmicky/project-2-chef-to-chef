@@ -18,8 +18,8 @@ db.sequelize.authenticate()
 
 db.sequelize.sync().then(() => {
     /*  */
-    findAllChef()
-    // createManyChef()
+    // findAllChef()
+    createManyChef()
 
     /*  */
 }).catch((err) => console.log(err))
@@ -43,20 +43,20 @@ findAllChef = () => {
 createManyChef = () => {
     Chef
         .bulkCreate([{
-                name: 'Link',
-                price: 70,
-                cuisine: 'mexican'
-            },
-            {
-                name: 'Zelda',
-                price: 30,
-                cuisine: 'chinese'
-            },
-            {
-                name: 'Kevin',
-                price: 20,
-                cuisine: 'american'
-            },
+            name: 'Link',
+            price: 70,
+            cuisine: 'mexican'
+        },
+        {
+            name: 'Zelda',
+            price: 30,
+            cuisine: 'chinese'
+        },
+        {
+            name: 'Kevin',
+            price: 20,
+            cuisine: 'american'
+        },
         ])
         .then(chefData => {
             console.log(chefData);
