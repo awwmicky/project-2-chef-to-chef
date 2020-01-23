@@ -35,15 +35,17 @@ router.get("/chef-listing", (req, res) => {
     )
 })
 
+/*  */
 router.get("/testing", (req, res) => {
     res.render(
         "testing.hbs", {
-        title: 'Testing Page',
-        style: 'testing.css',
-        script: 'testing.js'
-    }
+            title: 'Testing Page',
+            style: 'testing.css',
+            script: 'testing.js'
+        }
     )
 })
+/*  */
 
 router.get('/login', (req, res) => {
     console.log('- Login Page -')

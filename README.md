@@ -1,4 +1,4 @@
-# Project 2 - Pineapple Cakes
+# Project 2 - Chef To Chef
 
 ## Team Members:
 

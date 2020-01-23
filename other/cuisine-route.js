@@ -3,6 +3,8 @@ const router = express.Router();
 // const cuisine = require("../../database/models").cuisine
 // const Chef = require("../../database/models").Chef
 
+
+
 router.get("/find/:id", (req, res) => {
     cuisine.findAll({
         where: {
@@ -24,4 +26,5 @@ router.post("/new", (req, res) => {
 });
 
 
-module.exports = router;
+
+// module.exports = router;

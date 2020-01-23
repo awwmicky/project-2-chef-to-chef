@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 // const User = require("../../database/models").User
 
+
+
 router.get("/", (req, res) => {
     Author.findAll({
         include: [comment]
@@ -20,4 +22,6 @@ router.post("/", (req, res) => {
     })
 })
 
-module.exports = router;
+
+
+// module.exports = router;
