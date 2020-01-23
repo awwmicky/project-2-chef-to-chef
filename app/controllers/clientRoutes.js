@@ -6,24 +6,31 @@ const router = express.Router();
 router.get('/', (req, res) => {
     console.log('— Home Page —')
 
-    res.render('home.hbs',
-    {
+    res.render('home.hbs', {
         title: 'Home Page',
         style: 'home.css',
         script: 'home.js'
-    }
-    )
+    })
 })
 
 router.get('/add-chef', (req, res) => {
     console.log('- Add Chef Page -')
 
     res.render(
-        'add-chef.hbs',
-        {
+        'add-chef.hbs', {
             title: 'Add Chef Page',
             style: 'add-chef.css',
             script: 'add-chef.js'
+        }
+    )
+})
+
+router.get("/chef-listing", (req, res) => {
+    res.render(
+        "chef-listing.hbs", {
+            title: 'Chef listing page',
+            style: 'chef-listing.css',
+            script: 'chef-listing.js'
         }
     )
 })
