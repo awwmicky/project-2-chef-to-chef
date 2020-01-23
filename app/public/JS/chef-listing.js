@@ -16,16 +16,16 @@ $(() => {
         for (let i = 0; i < data.length; i++) {
             $(".chef-listing").append(
                 `<div data-id="${data[i].id}">
-        <p>
-            ${data[i].name}
-        </p>
-        <span>
-            ${data[i].price}
-        </span>
-        <span>
-            ${data[i].cuisine}
-        </span>
-    </div>`
+                    <span class="chef-name">
+                        ${data[i].name}
+                    </span>
+                    <span>
+                        ${data[i].price}
+                    </span>
+                    <span>
+                        ${data[i].cuisine}
+                    </span>
+                </div>`
             )
         }
     }

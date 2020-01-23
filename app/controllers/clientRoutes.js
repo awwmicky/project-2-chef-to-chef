@@ -28,9 +28,19 @@ router.get('/add-chef', (req, res) => {
 router.get("/chef-listing", (req, res) => {
     res.render(
         "chef-listing.hbs", {
-        title: 'Chef listing page',
+        title: 'Chef Listing Page',
         style: 'chef-listing.css',
         script: 'chef-listing.js'
+    }
+    )
+})
+
+router.get("/testing", (req, res) => {
+    res.render(
+        "testing.hbs", {
+        title: 'Testing Page',
+        style: 'testing.css',
+        script: 'testing.js'
     }
     )
 })

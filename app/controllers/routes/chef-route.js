@@ -85,6 +85,8 @@ router.post("/add", (req, res) => {
     console.log(req.body)
 
     Chef
+
+    '[fgh'
         .create({
             name: req.body.name,
             price: Number(req.body.price),
