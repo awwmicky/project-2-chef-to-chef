@@ -1,12 +1,12 @@
 $(() => {
     /*  */
     $.ajax({
-            type: "get",
-            url: "api/chef/all"
-        }).then((data) => {
-            console.log(data);
-            renderAllChef(data)
-        })
+        type: "get",
+        url: "api/chef/all"
+    }).then((data) => {
+        console.log(data);
+        renderAllChef(data)
+    })
         .catch(err => {
             console.log(err)
         })
@@ -15,14 +15,14 @@ $(() => {
         $(".chef-listing").empty() //take out any extra stuff in the section 
         for (let i = 0; i < data.length; i++) {
             $(".chef-listing").append(
-                `<div data-id="${data[i].id}">
+                `<div class="chef-list" data-id="${data[i].id}">
                     <span class="chef-name">
                         ${data[i].name}
                     </span>
-                    <span>
+                    <span class="chef-price">
                         ${data[i].price}
                     </span>
-                    <span>
+                    <span class="chef-cuisine">
                         ${data[i].cuisine}
                     </span>
                 </div>`

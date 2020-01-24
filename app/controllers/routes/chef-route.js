@@ -5,31 +5,11 @@ const parse = require('../../custom/parse');
 const {
     Op
 } = require("../../models/").Sequelize;
-const {
-    Chef
-} = require("../../models/");
-// const comment = require("../../database/models").comment
-// const cuisine = require("../../database/models").cuisine
+const db = require("../../models/");
 
-// router.post("/new", (req, res) => {
-//     Chef.create({
-//         name: req.body.name
-//     }).then(newChef => {
-//         res.send(newChef);
-//     });
-// });
 
-// router.post("/new", (req, res) => {
-//     Chef.create({
-//         name: req.body.name
-//     }).then(Chef => {
-//         res.json({
-//             message: "we did it"
-//         })
-//     })
-// })
 
-router.get("/all", (req, res) => {
+router.get("/chef", (req, res) => {
     Chef
         .findAll()
         .then(allChefs => {
@@ -46,12 +26,14 @@ router.get("/all", (req, res) => {
 router.get("/search/:cuisine/:price", (req, res) => {
     let cuisine = req.params.cuisine;
     let price = req.params.price;
-    console.log(cuisine, price)
+    console.log("THIS", cuisine, price)
     // router.get("/search", (req, res) => {
     //     let cuisine = req.query.cuisine;
     //     let price = req.query.price;
     //     console.log(cuisine, price)
-
+    let cuisineMap = {
+        "american": 3
+    }
     let priceRange;
 
     if (price === "1") {
@@ -62,31 +44,31 @@ router.get("/search/:cuisine/:price", (req, res) => {
         priceRange = [61, 100]
     }
 
-    Chef
+    db.Chef
         .findAll({
             where: {
-                cuisine: cuisine,
+                CuisineId: cuisineMap[cuisine],
                 price: {
                     [Op.between]: priceRange
                 }
-            }
+            },
+            include: [db.Cuisine]
         })
         .then(allChefs => {
             console.log(allChefs)
             parse.captureData(allChefs)
             res.send(allChefs)
+            console.log(allChefs[0].Cuisine)
         })
         .catch(err => {
             console.log(err)
         })
 })
 
-router.post("/add", (req, res) => {
+router.post("/chef", (req, res) => {
     console.log(req.body)
 
     Chef
-
-    '[fgh'
         .create({
             name: req.body.name,
             price: Number(req.body.price),
@@ -101,29 +83,31 @@ router.post("/add", (req, res) => {
             console.log(err)
         })
 })
-router.delete('/delete/:id', (req, res) => {
 
+router.delete('/delete/:id', (req, res) => {
     Chef
         .destory({
             where: {
                 id: req.params.id
             }
-        }).then(results => {
-            res.send(chef)
+        }).then( results => {
+            res.send(results)
         })
 })
-router.put('/update', (req, res) => {
+
+router.put('/chef', (req, res) => {
+    console.log('update')
 
     Chef
         .update({
             chef: req.body.chef,
             price: req.body.price,
-            cuisine: req.body.cuisine
+            // cuisine: req.body.cuisine
         }, {
             where: {
                 id: req.body.id
             }
-        }).then(results => {
+        }).then( results => {
             res.send(results)
         })
 })

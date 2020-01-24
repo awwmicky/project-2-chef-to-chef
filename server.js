@@ -20,20 +20,20 @@ app.set('view engine', 'hbs')
 
 
 
-const commentRoutes = require('./app/controllers/routes/comment-route.js');
+// const commentRoutes = require('./app/controllers/routes/comment-route.js');
 
-const cuisineRoutes = require('./app/controllers/routes/cuisine-route.js');
+// const cuisineRoutes = require('./app/controllers/routes/cuisine-route.js');
+
+// const userRoutes = require('./app/controllers/routes/user-route.js');
 
 const chefRoutes = require('./app/controllers/routes/chef-route.js');
 
-const userRoutes = require('./app/controllers/routes/user-route.js');
-
 const clientRoutes = require('./app/controllers/clientRoutes.js');
 
-app.use('/api/comment', commentRoutes)
-app.use('/api/cuisine', cuisineRoutes)
+// app.use('/api/comment', commentRoutes)
+// app.use('/api/cuisine', cuisineRoutes)
+// app.use('/api/user', userRoutes)
 app.use('/api/chef', chefRoutes)
-app.use('/api/user', userRoutes)
 app.use('/', clientRoutes)
 
 
