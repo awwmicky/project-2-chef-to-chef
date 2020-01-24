@@ -1,0 +1,35 @@
+.chef-listing {
+    border: 1px solid pink;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.chef-list {
+    border: 1px solid black;
+    background-color: hotpink;
+    margin: 10px;
+    height: 50px;
+    width: 150px;
+}
+
+
+
+.chef-name {
+    color: orange;
+}
+
+.chef-price {
+    color: greenyellow;
+}
+
+/*
+template literals:
+div: .chef-list
+span: .chef-name
+span: .chef-price
+span: .chef-cuisine
+*/
