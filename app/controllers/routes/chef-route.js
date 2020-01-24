@@ -6,26 +6,8 @@ const {
     Op
 } = require("../../models/").Sequelize;
 const db = require("../../models/");
-// const comment = require("../../database/models").comment
-// const cuisine = require("../../database/models").cuisine
 
-// router.post("/new", (req, res) => {
-//     Chef.create({
-//         name: req.body.name
-//     }).then(newChef => {
-//         res.send(newChef);
-//     });
-// });
 
-// router.post("/new", (req, res) => {
-//     Chef.create({
-//         name: req.body.name
-//     }).then(Chef => {
-//         res.json({
-//             message: "we did it"
-//         })
-//     })
-// })
 
 router.get("/chef", (req, res) => {
     Chef
@@ -87,7 +69,6 @@ router.post("/chef", (req, res) => {
     console.log(req.body)
 
     Chef
-
         .create({
             name: req.body.name,
             price: Number(req.body.price),
@@ -102,18 +83,20 @@ router.post("/chef", (req, res) => {
             console.log(err)
         })
 })
-router.delete('/chef/:id', (req, res) => {
 
+router.delete('/delete/:id', (req, res) => {
     Chef
         .destory({
             where: {
                 id: req.params.id
             }
-        }).then(results => {
-            res.send(chef)
+        }).then( results => {
+            res.send(results)
         })
 })
+
 router.put('/chef', (req, res) => {
+    console.log('update')
 
     Chef
         .update({
@@ -124,7 +107,7 @@ router.put('/chef', (req, res) => {
             where: {
                 id: req.body.id
             }
-        }).then(results => {
+        }).then( results => {
             res.send(results)
         })
 })

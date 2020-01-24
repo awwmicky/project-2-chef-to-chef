@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const {
-    comment
-} = require('../../models');
+const { comment } = require('../app/models');
 // const comment = require("../../database/models").comment
 // const User = require("../../database/models").User
+
+
 
 router.get("/find/:id", (req, res) => {
     comment.findAll({
@@ -25,4 +25,7 @@ router.post("/new", (req, res) => {
         res.send(comment);
     });
 });
-module.exports = router;
+
+
+
+// module.exports = router;
