@@ -3,7 +3,7 @@ module.exports = function (sequelize, DataTypes) {
         // Giving the Chef model a name of type STRING
         name: DataTypes.STRING,
         price: DataTypes.INTEGER,
-        cuisine: DataTypes.STRING
+        // cuisine: DataTypes.STRING
 
         // name: DataTypes.STRING,
         // price: DataTypes.INTEGER,
@@ -14,12 +14,15 @@ module.exports = function (sequelize, DataTypes) {
 
     console.log(Chef_Model);
 
-    // Chef.associate = function (models) {
-    //     Chef.hasMany(models.Comment, {
-    //         onDelete: "cascade"
-    //     });
-    // };
-    // Chef.hasMany(models.cuisine, {
+    Chef_Model.associate = function (models) {
+        Chef_Model.belongsTo(models.Cuisine, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
+
+    // Chef_Model.hasMany(models.cuisine, {
     //     onDelete: "cascade"
     // });
     return Chef_Model;
