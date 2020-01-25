@@ -4,24 +4,52 @@ input: .name-input
 input: .price-input
 input: .cuisine-input
 input: .post-input
-
 */
 
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.fa-user{
+    padding: 15px;
+    background-color: greenyellow;
+    color: black;
+}
+
+.fa-dollar-sign{    
+    padding: 18px;
+    background-color: greenyellow;
+    color: black;}
+
+.add-chef {
+    display: flex;
+    flex-flow: wrap;
+    border: 2px solid black;
+    background-color:grey;
+    border-radius: 20px;
+}
 
 .add-chef-form {
-    border: 1px solid black;
-    align-items: center;
-    height: 150px;
-    margin: 10px;
-    text-align: center;
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
 }
 
 input {
-    margin-top: 20px;
-    border: 1px solid pink;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    text-size-adjust: 14px;
 }
 
-.post-input {
-    background-color: lawngreen;
+.post-input{
+    background-color: greenyellow;
+}
+
+.post-input:hover {
+    color: greenyellow;
+    background-color: orange;
 }
