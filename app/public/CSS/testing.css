@@ -3,8 +3,7 @@ main {
     position: relative;
 }
 
-
-
+/* Find a Chef container */
 .parent {
     display: flex;
     justify-content: center;
@@ -12,15 +11,18 @@ main {
     margin-top: 30px;
 }
 
+/* description containers */
 .parent2 {
     display: flex;
     width: 90%;
     background-color: white;
     margin: auto;
     height: 150px;
+    flex-wrap: wrap;
 
 }
 
+/* chef info containers  */
 .parent3 {
     margin-top: 50px;
     display: flex;
@@ -28,11 +30,14 @@ main {
     background-color: white;
     height: 200px;
     margin: auto;
+    flex-wrap: wrap;
 
 
 }
 
+/* child of parent2 */
 .child {
+
     flex-grow: 2;
     border-style: solid;
     border-color: rgb(173, 171, 171);
@@ -45,14 +50,20 @@ main {
     margin: 5px;
     /* box-shadow: 5px 10px #b9b8b8; */
     box-shadow: 0 0 20px rgb(146, 143, 143);
-
-
 }
 
+p {
+    font-family: 'Cairo', sans-serif;
+    font-size: 10pt;
+    margin-top: 15px;
+}
+
+
+/* child of parent3 */
 .child-chef {
-    flex-grow: 2;
+    flex-grow: 1;
     border-style: solid;
-    border-color: rgb(173, 171, 171);
+    border-color: rgb(5, 0, 0);
     background-color: rgb(194, 189, 189);
     border-width: 1px;
     text-align: center;
@@ -84,18 +95,20 @@ main {
 
 .rating {
     float: left;
+    position: relative;
+
 }
 
-button {
+.viewbtn {
     border: 1px solid;
-    border-color: orange;
+    border-color: rgb(226, 206, 170);
     font: inherit;
+    font-weight: bold;
     line-height: 0.5;
     margin: 0.5em;
     padding: 1em 2em;
     float: right;
-    transform: translate(-20px, -10px);
-
+    text-align: center;
 }
 
 .author-info {
@@ -114,9 +127,12 @@ button {
     color: white;
 }
 
+
+/* slider img/icons dont change */
 img {
     max-width: 100%;
     vertical-align: middle;
+
 }
 
 .slider,
