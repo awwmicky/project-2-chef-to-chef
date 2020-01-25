@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var cuisine = sequelize.define("cuisine", {
+    var Cuisine_Model = sequelize.define("Cuisine", {
         title: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -14,13 +14,13 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
 
-    cuisine.associate = function (models) {
-        cuisine.belongsTo(models.Chef, {
-            foreignKey: {
-                allowNull: false
-            }
+    console.log(Cuisine_Model)
+
+    Cuisine_Model.associate = function (models) {
+        Cuisine_Model.hasMany(models.Chef, {
+            onDelete: "cascade"
         });
     };
 
-    return cuisine;
+    return Cuisine_Model;
 };
