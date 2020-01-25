@@ -1,5 +1,55 @@
 <main>
 
+    {{!-- slider with images --}}
+
+    <div class="slider-wrapper">
+        <ul class="slider-nav">
+            <li class="slider-nav__item"><label class="slider-nav__label" for="one">○</label></li>
+            <li class="slider-nav__item"><label class="slider-nav__label" for="two">○</label></li>
+            <li class="slider-nav__item"><label class="slider-nav__label" for="three">○</label></li>
+            <li class="slider-nav__item"><label class="slider-nav__label" for="four">○</label></li>
+            <li class="slider-nav__item"><label class="slider-nav__label" for="five">○</label></li>
+        </ul>
+        <div class="slider">
+            <input type="radio" name="slider" class="trigger" id="one" checked="checked" />
+            <div class="slide">
+                <figure class="slide-figure">
+                    <img class="slide-img" src="https://restaurantden.com/wp-content/uploads/2017/09/stocksnap.jpg" />
+                </figure>
+            </div>
+            <input type="radio" name="slider" class="trigger" id="two" />
+            <div class="slide">
+                <figure class="slide-figure">
+                    <img class="slide-img" src="https://restaurantden.com/wp-content/uploads/2017/09/unsplash.jpg" />
+                </figure>
+            </div>
+            <input type="radio" name="slider" class="trigger" id="three" />
+            <div class="slide">
+                <figure class="slide-figure">
+                    <img class="slide-img" src="https://restaurantden.com/wp-content/uploads/2017/09/pexels.jpg" />
+                </figure>
+            </div>
+            <input type="radio" name="slider" class="trigger" id="four" />
+            <div class="slide">
+                <figure class="slide-figure">
+                    <img class="slide-img"
+                        src="https://restaurantden.com/wp-content/uploads/2017/09/iso-republic.jpg" />
+                </figure>
+            </div>
+            <input type="radio" name="slider" class="trigger" id="five" />
+            <div class="slide">
+                <figure class="slide-figure">
+                    <img class="slide-img" src="https://restaurantden.com/wp-content/uploads/2017/09/freestocks.jpg" />
+                </figure>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    {{!-- description boxes  --}}
+
     <section class="wrapper">
         <div class="parent">
             <div class="jumbotron">
@@ -12,13 +62,15 @@
         <div class="parent2">
             <div class="child">SEARCH
                 <div class="image"><img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLT4ik4oH11Dr4d8H8CWAcacAIsSnqI28yYjjK3STg2HjXJyzGOQ&s">
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLT4ik4oH11Dr4d8H8CWAcacAIsSnqI28yYjjK3STg2HjXJyzGOQ&s"
+                        width="65px" height="65px">
                 </div>
                 <p>Use the tool below to search our Chef roster.</p>
             </div>
             <div class="child">REQUEST
                 <div class="image"><img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLtUdwDhlIVwrnkAGg5ETxm981otZ44stA9QwJYgRpUMb3UsmXTg&s">
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLtUdwDhlIVwrnkAGg5ETxm981otZ44stA9QwJYgRpUMb3UsmXTg&s"
+                        width="65px" height="65px">
                 </div>
                 <p>Submit the request by providing details such as desired cuisine type,
                     price range and location.
@@ -26,7 +78,8 @@
             </div>
             <div class="child">REVIEW
                 <div class="image"><img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXi3GxCvKohuIFYkpSVudWPxqaSHu782p4Vm6uje0OKUDFEFBcIw&s">
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXi3GxCvKohuIFYkpSVudWPxqaSHu782p4Vm6uje0OKUDFEFBcIw&s"
+                        width="65px" height="65px">
                 </div>
                 <p>
                     Once you have submitted your request our team will send you your custom Meal Summary for final
@@ -34,7 +87,8 @@
                 </p>
             </div>
             <div class="child">CONFIRMATION
-                <div class="image"><img src="https://image.flaticon.com/icons/svg/809/809485.svg">
+                <div class="image"><img src="https://image.flaticon.com/icons/svg/809/809485.svg" width="65px"
+                        height="65px">
                 </div>
                 <p>
                     Once you are satisfied with your selection, submit payment
@@ -44,7 +98,57 @@
         </div>
     </section>
 
+    {{!-- container containing chef info  --}}
 
+    <div class="container" id="appended-chefs">
+        <section class="chef-info">
+            <div class="parent3">
+                <div class="child-chef">
+                    <h3>Miley</h3>
+                    <p>Price:</p>
+                    <p>Cuisine:</p>
+                    <div class="chef-image"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYd-7GYSGWtLAJ3sUGoRNAqqck1-RkJBHsYLuSgKMpLpO60OEE&s"
+                            width="65px" height="65px">
+                    </div>
+                    <div class="rating">
+                        <span>✰</span>✰<span>✰</span>✰<span>✰</span>
+                    </div>
+                    <button class="viewbtn">View</button>
+                </div>
+                <div class="child-chef">
+                    <h3>Herms</h3>
+                    <p>Price:</p>
+                    <p>Cuisine:</p>
+                    <div class="chef-image"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYd-7GYSGWtLAJ3sUGoRNAqqck1-RkJBHsYLuSgKMpLpO60OEE&s"
+                            width="65px" height="65px">
+                    </div>
+                    <div class="rating">
+                        <span class="star">✰</span>✰<span>✰</span>✰<span>✰</span>
+                    </div>
+                    <button class="viewbtn">View</button>
+                </div>
+
+                <div class="child-chef">
+                    <h3>Larry</h3>
+                    <p>Price:</p>
+                    <p>Cuisine:</p>
+                    <div class="chef-image"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYd-7GYSGWtLAJ3sUGoRNAqqck1-RkJBHsYLuSgKMpLpO60OEE&s"
+                            width="65px" height="65px">
+                    </div>
+                    <div class="rating">
+                        <span>✰</span>✰<span>✰</span>✰<span>✰</span>
+                    </div>
+                    <button class="viewbtn"><span>View</span></button>
+                </div>
+            </div>
+        </section>
+
+
+
+    </div>
 
 
 
