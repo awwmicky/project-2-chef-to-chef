@@ -1,21 +1,44 @@
-main {
-    text-align: center;
+
+.form-container {
+    margin: auto;
+    width: 50%;
+    border: 1px solid grey;
+    padding: 10px;
+    vertical-align: middle;
+    background-color: grey;
+    opacity: 0.75;
 }
 
-.cuisine-input {
-    width: 100px;
+.chef-data-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+select {
+    margin: 10px;
+}
+
+.location-input{
+    width: 150px;
     height: 25px;
-    margin-right: 25px;
-    margin-top: 15px;
+}
+.cuisine-input {
+    width: 150px;
+    height: 25px;
 }
 
 .price-input {
-    width: 100px;
+    width: 150px;
     height: 25px;
-    margin-top: 15px;
 }
 #price {
     color: 21bf73;
+}
+#submitBtn:hover {
+    background-color: orange;
+    color: black;
 }
 
 #submitBtn {
@@ -24,6 +47,7 @@ main {
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+    border-radius: 25px;
 }
 
 .showChef{
