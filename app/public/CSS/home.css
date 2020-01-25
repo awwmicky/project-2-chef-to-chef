@@ -1,73 +1,126 @@
-
-.form-container {
-    margin: auto;
-    width: 50%;
-    border: 1px solid grey;
-    padding: 10px;
-    vertical-align: middle;
-    background-color: grey;
-    opacity: 0.75;
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
-.chef-data-form {
+.form-container {
+    background-color: grey;
+    border: 2px solid black;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    flex-flow: wrap;
+    max-width: 100%;
+    margin-top: 30px;
 }
 
 select {
     margin: 10px;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.chef-data-form {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+}
+
 .location-input{
     width: 150px;
     height: 25px;
+    flex-wrap: wrap;
+    display: flex;
 }
+
 .cuisine-input {
     width: 150px;
     height: 25px;
+    flex-wrap: wrap;
+    display: flex;
 }
 
 .price-input {
     width: 150px;
     height: 25px;
+    flex-wrap: wrap;
+    display: flex;
 }
-#price {
-    color: 21bf73;
+
+.btn-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    flex: 1;
 }
+
+.btn {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+
 #submitBtn:hover {
     background-color: orange;
     color: black;
 }
 
 #submitBtn {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
     background-color:green;
     color: white;
     padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
     border-radius: 25px;
 }
 
-.showChef{
-    background-color: grey;
+#showChef{
+    border: 1px solid black;
+    background-color:grey;
+    opacity: 0.75;
     margin: 10px;
-    padding: 10px;
+    height: 100px;
     width: 150px;
+    flex-wrap: wrap;
+    display: flex;
 }
 
-.chefName {
+#chefName {
     color: orange;
+    flex-wrap: wrap;
+    display: flex;
 }
 
-.chefPrice{
+#chefPrice{
     color: greenyellow;
+    flex-wrap: wrap;
+    display: flex;
 }
 
-.chefCuisine{
+#chefCuisine{
     color: greenyellow;
+    flex-wrap: wrap;
+    display: flex;
 }
+
 .results{
     display:flex;
     align-items: center;
