@@ -8,14 +8,13 @@ module.exports = function (sequelize, DataTypes) {
 
     console.log(Chef_Model);
 
-    // Chef.associate = function (models) {
-    //     Chef.hasMany(models.Comment, {
-    //         onDelete: "cascade"
+    // Chef_Model.associate = function (models) {
+    //     Chef_Model.belongsTo(models.Cuisine, {
+    //         foreignKey: {
+    //             allowNull: false
+    //         }
     //     });
     // };
-    // Chef.hasMany(models.cuisine, {
-    //     onDelete: "cascade"
-    // });
 
     return Chef_Model;
 };

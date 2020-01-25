@@ -14,11 +14,12 @@ $(() => {
 
         data.forEach(info => {
             $results.append(
-                `<div class="showChef" data-id="${info.id}">
-                <h3 class="chefName">Chef ${info.name}</h3>
-                <p class="chefPrice">price: ${info.price}/hr</p>
-                <p class="chefCuisine">cuisine: ${info.cuisine}</p>
-            </div>`
+
+                `<div id="showChef" data-id="${info.id}">
+                    <h3 id="chefName">Chef ${info.name}</h3>
+                    <p id="chefPrice">price: ${info.price}/hr</p>
+                    <p id="chefCuisine">cuisine: ${info.cuisine}</p>
+                </div>`
             )
         })
     };
@@ -30,22 +31,23 @@ $(() => {
 
         let cuisine = $cuisineInput.val();
         let price = $priceInput.val();
-        console.log(cuisine, price)
+        console.log(
+            `Front-End: ${cuisine} & ${price}`
+        )
 
-        // let query = `?cuisine=${cuisine}&price=${price}`;
+        let query = `?cuisine=${cuisine}&price=${price}`;
 
         $.ajax({
             type: 'GET',
-            // url: `api/chef/search${query}`,
-            url: `api/chef/search/${cuisine}/${price}`
+            url: `api/chef/search${query}`,
         })
-            .then(chefData => {
-                console.log(chefData)
-                renderChefData(chefData)
-            })
-            .catch(err => {
-                console.log(err)
-            })
+        .then(chefData => {
+            console.log(chefData)
+            renderChefData(chefData)
+        })
+        .catch(err => {
+            console.log(err)
+        })
     })
 
     // $chefForm.on('submit', (e) => {

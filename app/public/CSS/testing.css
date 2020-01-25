@@ -1,19 +1,39 @@
 .parent {
     display: flex;
     justify-content: center;
+    height: 100px;
+    margin-top: 30px;
 }
 
 .parent2 {
     display: flex;
-    width: 80%;
-    background-color: yellow;
+    width: 90%;
+    background-color: white;
     margin: auto;
-    height: 100px;
+    height: 150px;
 
 }
 
 .child {
     flex-grow: 2;
     border-style: solid;
+    border-color: rgb(173, 171, 171);
+    border-width: 1px;
     text-align: center;
+    border-radius: 25px;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    /* box-shadow: 5px 10px #b9b8b8; */
+    box-shadow: 0 0 20px rgb(146, 143, 143);
+
+
+}
+
+
+img {
+    width: 60px;
+    height: 60px;
+
 }
