@@ -55,18 +55,6 @@ router.get("/do-not-edit", (req, res) => {
 })
 /*  */
 
-router.get('/login', (req, res) => {
-    console.log('- Login Page -')
-
-    res.render(
-        'login.hbs', {
-            title: 'Login Page',
-            style: 'login.css',
-            script: 'login.js'
-        }
-    )
-})
-
 router.get('*', (req,res) => {
     // console.log('— NO Page —')
     res.send('Page Not Found')

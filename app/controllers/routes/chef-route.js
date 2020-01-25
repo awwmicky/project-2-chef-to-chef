@@ -74,7 +74,11 @@ router.post("/create", (req, res) => {
     })
 })
 
+
+
 /* ---------- */
+
+
 
 router.delete('/delete/:id', (req, res) => {
     console.log('delete')
@@ -96,7 +100,7 @@ router.put('/chef', (req, res) => {
     .update({
         chef: req.body.chef,
         price: req.body.price,
-        // cuisine: req.body.cuisine
+        cuisine: req.body.cuisine
     }, {
         where: {
             id: req.body.id
