@@ -20,19 +20,11 @@ app.set('view engine', 'hbs')
 
 
 
-// const commentRoutes = require('./app/controllers/routes/comment-route.js');
-
 // const cuisineRoutes = require('./app/controllers/routes/cuisine-route.js');
-
-// const userRoutes = require('./app/controllers/routes/user-route.js');
-
 const chefRoutes = require('./app/controllers/routes/chef-route.js');
+const clientRoutes = require('./app/controllers/client-route.js');
 
-const clientRoutes = require('./app/controllers/clientRoutes.js');
-
-// app.use('/api/comment', commentRoutes)
 // app.use('/api/cuisine', cuisineRoutes)
-// app.use('/api/user', userRoutes)
 app.use('/api/chef', chefRoutes)
 app.use('/', clientRoutes)
 
@@ -45,7 +37,7 @@ db.sequelize.authenticate()
     .then(_ => console.log('Database Connected — ✓'))
     .catch(err => console.log(`Err: ${err}`))
 
-db.sequelize.sync().then(_ => {
+db.sequelize.sync().then( _ => {
     app.listen(PORT, _ => {
         console.log(
             `Test Server — http://localhost:${PORT}`

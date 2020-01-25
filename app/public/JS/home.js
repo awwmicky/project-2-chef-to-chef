@@ -15,10 +15,10 @@ $(() => {
         data.forEach(info => {
             $results.append(
                 `<div id="showChef" data-id="${info.id}">
-                <h3 id="chefName">Chef ${info.name}</h3>
-                <p id="chefPrice">price: ${info.price}/hr</p>
-                <p id="chefCuisine">cuisine: ${info.cuisine}</p>
-            </div>`
+                    <h3 id="chefName">Chef ${info.name}</h3>
+                    <p id="chefPrice">price: ${info.price}/hr</p>
+                    <p id="chefCuisine">cuisine: ${info.cuisine}</p>
+                </div>`
             )
         })
     };
@@ -32,12 +32,12 @@ $(() => {
         let price = $priceInput.val();
         console.log(cuisine, price)
 
-        // let query = `?cuisine=${cuisine}&price=${price}`;
+        let query = `?cuisine=${cuisine}&price=${price}`;
 
         $.ajax({
             type: 'GET',
-            // url: `api/chef/search${query}`,
-            url: `api/chef/search/${cuisine}/${price}`
+            url: `api/chef/search${query}`,
+            // url: `api/chef/search/${cuisine}/${price}`
         })
             .then(chefData => {
                 console.log(chefData)
