@@ -14,10 +14,10 @@ $(() => {
 
         data.forEach(info => {
             $results.append(
-                `<div id="showChef" data-id="${info.id}">
-                <h3 id="chefName">Chef ${info.name}</h3>
-                <p id="chefPrice">price: ${info.price}/hr</p>
-                <p id="chefCuisine">cuisine: ${info.cuisine}</p>
+                `<div class="showChef" data-id="${info.id}">
+                <h3 class="chefName">Chef ${info.name}</h3>
+                <p class="chefPrice">price: ${info.price}/hr</p>
+                <p class="chefCuisine">cuisine: ${info.cuisine}</p>
             </div>`
             )
         })
