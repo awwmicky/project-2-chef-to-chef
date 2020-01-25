@@ -22,11 +22,11 @@ app.set('view engine', 'hbs')
 
 // const cuisineRoutes = require('./app/controllers/routes/cuisine-route.js');
 const chefRoutes = require('./app/controllers/routes/chef-route.js');
-const clientRoutes = require('./app/controllers/client-route.js');
+const htmlRoutes = require('./app/controllers/html-route.js');
 
 // app.use('/api/cuisine', cuisineRoutes)
 app.use('/api/chef', chefRoutes)
-app.use('/', clientRoutes)
+app.use('/', htmlRoutes)
 
 
 

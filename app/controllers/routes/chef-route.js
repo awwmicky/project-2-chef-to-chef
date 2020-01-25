@@ -21,8 +21,11 @@ router.get("/all", (req, res) => {
 });
 
 router.get("/search", (req, res) => {
+    console.log(req.query)
+
     let cuisine = req.query.cuisine;
     let price = req.query.price;
+    
     console.log(
         `Back-End: ${cuisine} & ${price}`
     )
