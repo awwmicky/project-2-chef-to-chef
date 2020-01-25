@@ -1,16 +1,15 @@
 .chef-listing {
-    border: 1px solid pink;
+    border: 1px solid grey;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 100%;
+    margin-top: 10px;
+    flex-direction: column;
 }
 
 .chef-list {
     border: 1px solid black;
-    background-color: hotpink;
+    background-color:grey;
     margin: 10px;
     height: 50px;
     width: 150px;
@@ -32,4 +31,17 @@ div: .chef-list
 span: .chef-name
 span: .chef-price
 span: .chef-cuisine
+*/
+/*
+    `<div class="chef-list" data-id="${data[i].id}">
+        <span class="chef-name">
+            ${data[i].name}
+        </span>
+        <span class="chef-price">
+            ${data[i].price}
+        </span>
+        <span class="chef-cuisine">
+            ${data[i].cuisine}
+        </span>
+    </div>`
 */

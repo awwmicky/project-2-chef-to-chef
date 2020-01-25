@@ -1,16 +1,21 @@
 <main>
-    <div>
+    <div class="form-container">
         <form class="chef-data-form">
-            <label for="cuisine">Pick a cuisine</label>
-            <select autofocus name="cuisine" class="cuisine-input">
-                <option value="mexican">mexican</option>
-                <option value="chinese">chinese</option>
-                <option value="american">american</option>
+            <select name="location" class="location-input">
+                <option value="location" selected disabled>Location</option>
+                <option value="x">Bay Area</option>
+            </select>
+            <br>
+            <select name="cuisine" class="cuisine-input">
+                <option value="cuisine" selected disabled>Choose A Cuisine</option>
+                <option value="mexican">Mexican</option>
+                <option value="chinese">Chinese</option>
+                <option value="american">American</option>
             </select>
             <br>
             {{!-- <label for="price">Choose a price range</label> --}}
             <select name="price" class="price-input">
-                <option value="x" selected disabled>How many 20s you gonna spend</option>
+                <option value="x" selected disabled>Select A Price Range</option>
                 <option value="1">$</option>
                 <option value="2">$$</option>
                 <option value="3">$$$</option>
@@ -19,7 +24,11 @@
             {{!-- <label for="submit">Find that chef</label> --}}
             <input name="submit" id="submitBtn" type="submit" value="Find my chef!">
         </form>
+        <br>
     </div>
+
+
+
     <section class="results"></section>
 </main>
 <!--     -->
