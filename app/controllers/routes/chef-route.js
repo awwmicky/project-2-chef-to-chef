@@ -20,14 +20,13 @@ router.get("/all", (req, res) => {
     })
 });
 
-// router.get("/search/:cuisine/:price", (req, res) => {
-//     let cuisine = req.params.cuisine;
-//     let price = req.params.price;
-//     console.log("THIS", cuisine, price)
 router.get("/search", (req, res) => {
     let cuisine = req.query.cuisine;
     let price = req.query.price;
-    console.log(cuisine, price)
+    console.log(
+        `Back-End: ${cuisine} & ${price}`
+    )
+    
     let priceRange;
 
     if (price === "1") {
@@ -66,15 +65,16 @@ router.post("/create", (req, res) => {
         price: Number(req.body.price),
         cuisine: req.body.cuisine
     })
-    .then(chef => {
-        // parse.captureData(chef)
-        console.log(chef);
-        res.send(chef)
+    .then( (chefData) => {
+        console.table(chefData)
+        res.send(chefData)
     })
-    .catch((err) => {
+    .catch( (err) => {
         console.log(err)
     })
 })
+
+/* ---------- */
 
 router.delete('/delete/:id', (req, res) => {
     console.log('delete')

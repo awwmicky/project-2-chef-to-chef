@@ -30,22 +30,23 @@ $(() => {
 
         let cuisine = $cuisineInput.val();
         let price = $priceInput.val();
-        console.log(cuisine, price)
+        console.log(
+            `Front-End: ${cuisine} & ${price}`
+        )
 
         let query = `?cuisine=${cuisine}&price=${price}`;
 
         $.ajax({
             type: 'GET',
             url: `api/chef/search${query}`,
-            // url: `api/chef/search/${cuisine}/${price}`
         })
-            .then(chefData => {
-                console.log(chefData)
-                renderChefData(chefData)
-            })
-            .catch(err => {
-                console.log(err)
-            })
+        .then(chefData => {
+            console.log(chefData)
+            renderChefData(chefData)
+        })
+        .catch(err => {
+            console.log(err)
+        })
     })
 
     // $chefForm.on('submit', (e) => {
