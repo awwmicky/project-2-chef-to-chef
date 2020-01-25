@@ -1,18 +1,23 @@
 <main>
     <div>
         <form class="chef-data-form">
-            <select class="cuisine-input">
+            <label for="cuisine">Pick a cuisine</label>
+            <select autofocus name="cuisine" class="cuisine-input">
                 <option value="mexican">mexican</option>
                 <option value="chinese">chinese</option>
                 <option value="american">american</option>
             </select>
-            <select class="price-input">
+            <br>
+            {{!-- <label for="price">Choose a price range</label> --}}
+            <select name="price" class="price-input">
+                <option value="x" selected disabled>How many 20s you gonna spend</option>
                 <option value="1">$</option>
                 <option value="2">$$</option>
                 <option value="3">$$$</option>
             </select>
             <br>
-            <input id="submitBtn" type="submit" value="SUBMIT">
+            {{!-- <label for="submit">Find that chef</label> --}}
+            <input name="submit" id="submitBtn" type="submit" value="Find my chef!">
         </form>
     </div>
 

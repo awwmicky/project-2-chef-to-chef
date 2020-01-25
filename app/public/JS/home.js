@@ -14,6 +14,7 @@ $(() => {
 
         data.forEach(info => {
             $results.append(
+
                 `<div id="showChef" data-id="${info.id}">
                     <h3 id="chefName">Chef ${info.name}</h3>
                     <p id="chefPrice">price: ${info.price}/hr</p>
