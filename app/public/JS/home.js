@@ -41,13 +41,13 @@ $(() => {
             type: 'GET',
             url: `api/chef/search${query}`,
         })
-        .then(chefData => {
-            console.log(chefData)
-            renderChefData(chefData)
-        })
-        .catch(err => {
-            console.log(err)
-        })
+            .then(chefData => {
+                console.log(chefData)
+                renderChefData(chefData)
+            })
+            .catch(err => {
+                console.log(err)
+            })
     })
 
     // $chefForm.on('submit', (e) => {
