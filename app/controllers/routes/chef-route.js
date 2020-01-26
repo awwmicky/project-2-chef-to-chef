@@ -10,26 +10,22 @@ const { Chef } = require("../../models/");
 router.get("/all", (req, res) => {
     Chef
     .findAll()
-    .then( (allChefs) => {
-        const chefs = parse.captureData(allChefs);
+    .then(allChefs => {
+        var chefs = parse.captureData(allChefs)
+        console.table(chefs);
 
         res.send(chefs)
     })
-    .catch( (err) => {
+    .catch((err) => {
         console.log(err)
     })
 });
 
 router.get("/search", (req, res) => {
-    console.log(req.query)
-
     let cuisine = req.query.cuisine;
     let price = req.query.price;
-    
-    console.log(
-        `Back-End: ${cuisine} & ${price}`
-    )
-    
+    console.log(`Front-End: ${cusine} - ${price}`)
+
     let priceRange;
 
     if (price === "1") {
@@ -41,76 +37,69 @@ router.get("/search", (req, res) => {
     }
 
     Chef
-    .findAll({
-        where: {
-            cuisine: cuisine,
-            price: {
-                [Op.between]: priceRange
+        .findAll({
+            where: {
+                cuisine: cuisine,
+                price: {
+                    [Op.between]: priceRange
+                }
             }
-        }
-    })
-    .then( (allChefs) => {
-        // console.log(allChefs)
-        parse.captureData(allChefs)
-        res.send(allChefs)
-    })
-    .catch( (err) => {
-        console.log(err)
-    })
+        })
+        .then(allChefs => {
+            console.log(allChefs)
+            parse.captureData(allChefs)
+            res.send(allChefs)
+        })
+        .catch(err => {
+            console.log(err)
+        })
 })
 
-router.post("/create", (req, res) => {
+router.post("/add", (req, res) => {
     console.log(req.body)
 
     Chef
-    .create({
-        name: req.body.name,
-        price: Number(req.body.price),
-        cuisine: req.body.cuisine
-    })
-    .then( (chefData) => {
-        console.table(chefData)
-        res.send(chefData)
-    })
-    .catch( (err) => {
-        console.log(err)
-    })
+        .create({
+            name: req.body.name,
+            price: Number(req.body.price),
+            cuisine: req.body.cuisine
+        })
+        .then(chef => {
+            // parse.captureData(chef)
+            console.log(chef);
+            res.send(chef)
+        })
+        .catch((err) => {
+            console.log(err)
+        })
 })
-
-
-
-/* ---------- */
-
-
 
 router.delete('/delete/:id', (req, res) => {
-    console.log('delete')
 
     Chef
-    .destory({
-        where: {
-            id: req.params.id
-        }
-    }).then( results => {
-        res.send(results)
-    })
+        .destory({
+            where: {
+                id: req.params.id
+            }
+        }).then( results => {
+            res.send(results)
+        })
 })
 
-router.put('/chef', (req, res) => {
-    console.log('update')
+router.put('/update', (req, res) => {
 
     Chef
-    .update({
-        chef: req.body.chef,
-        price: req.body.price,
-        cuisine: req.body.cuisine
-    }, {
-        where: {
-            id: req.body.id
-        }
-    }).then( results => {
-        res.send(results)
-    })
+        .update({
+            chef: req.body.chef,
+            price: req.body.price,
+            cuisine: req.body.cuisine
+        }, {
+            where: {
+                id: req.body.id
+            }
+        }).then( results => {
+            res.send(results)
+        })
 })
 
 

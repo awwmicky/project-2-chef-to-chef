@@ -25,7 +25,7 @@ const chefRoutes = require('./app/controllers/routes/chef-route.js');
 const htmlRoutes = require('./app/controllers/html-route.js');
 
 // app.use('/api/cuisine', cuisineRoutes)
-app.use('/api/chef', chefRoutes)
+// app.use('/api/chef', chefRoutes)
 app.use('/', htmlRoutes)
 
 

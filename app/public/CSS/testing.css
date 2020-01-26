@@ -1,28 +1,46 @@
+main {
+    min-height: 300vh;
+    position: relative;
+}
+
+/* body {
+    height: 100%;
+} */
+
+/* cookie rating icon */
 .fa-cookie-bite {
     color: rgb(110, 81, 18);
     font-size: 15pt;
 }
 
-.fa-user-circle {
-    color: #20bf6b;
-    font-size: 70pt;
-}
-
-main {
-    min-height: 200vh;
-    position: relative;
-}
-
-/* Find a Chef container */
-.parent {
-    display: flex;
-    justify-content: center;
-    height: 100px;
+/* container where cookies live */
+.rating {
+    float: left;
+    /* position: relative; */
+    /* border: 2px solid black; */
+    /* margin-bottom: 20pt; */
     margin-top: 30px;
 }
 
-/* description containers */
-.parent2 {
+/* profile icon in chef info */
+.fa-user-circle {
+    color: #108143;
+    font-size: 70pt;
+}
+
+/* Find my chef Title container   */
+.title-page {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font: 30pt;
+
+}
+
+/* container that contains 4 description boxes  */
+.description-boxes {
     display: flex;
     width: 90%;
     background-color: white;
@@ -37,19 +55,14 @@ main {
     display: flex;
     width: 100%;
     height: 100%;
-    border: 2px solid black;
-    height: 200px;
-    /* margin: auto; */
     flex-wrap: wrap;
-
-
 }
 
-/* child of parent2 */
+/* 4 boxes inside description-boxes,  */
 .child {
     flex-grow: 2;
     border-style: solid;
-    border-color: rgb(173, 171, 171);
+    border-color: rgb(214, 209, 209);
     border-width: 1px;
     text-align: center;
     border-radius: 25px;
@@ -61,42 +74,49 @@ main {
     box-shadow: 0 0 20px rgb(146, 143, 143);
 }
 
+/* paragraph describing boxes */
 p {
     font-family: 'Cairo', sans-serif;
     font-size: 10pt;
     margin-top: 15px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 
-/* child of parent3 */
+/* chef info containers  */
+.chef-info-container {
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    /* height: 200px; */
+    /* margin: auto; */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 
+/* child of chef-info-conatiners */
 .child-chef {
     /* flex-grow: 1; */
     border-style: solid;
-    border-color: rgb(5, 0, 0);
-    background-color: rgb(228, 222, 222);
+    /* background: url("http://ohlookawebsite.com/bathroomtestfull.jpg") no-repeat center center; */
+    border-color: rgb(233, 228, 228);
+    background-color: rgb(240, 234, 234);
     border-width: 1px;
-    text-align: center;
-    align-items: center;
+    /* text-align: center;
+    align-items: center; */
     /* border-radius: 25px; */
     padding: 20px;
     width: 350px;
     height: 350px;
     margin: 10px;
-    opacity: 0.8;
-    filter: alpha(opacity=50);
 }
-
-/* img {
-    width: 60px;
-    height: 60px;
-} */
 
 .chef-image {
     /* justify-content: flex-end; */
     /* transform: translate(-150px, -50px); */
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 100px;
     height: 100px;
     margin-top: 30px;
@@ -104,24 +124,14 @@ p {
 
 .chef-info {
     /* background-color: red; */
-    margin-top: 300px;
+    margin-top: 100px;
+    height: 100%;
 }
 
-.rating {
-    float: left;
-    /* position: relative; */
-    border: 2px solid black;
-    /* margin-bottom: 20pt; */
-    margin-top: 30px;
 
-
-
-}
-
-.viewbtn {
+.request-btn {
     border: 1px solid;
     border-color: rgb(226, 206, 170);
-    border: 2px solid black;
     font: inherit;
     font-weight: bold;
     line-height: 0.5;
@@ -129,22 +139,7 @@ p {
     padding: 1em 2em;
     float: right;
     text-align: center;
-}
 
-.author-info {
-    background: rgba(0, 0, 0, 0.75);
-    color: white;
-    padding: 0.75rem;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-}
-
-.author-info a {
-    color: white;
 }
 
 
@@ -152,7 +147,6 @@ p {
 img {
     max-width: 100%;
     vertical-align: middle;
-
 }
 
 .slider,
@@ -199,10 +193,6 @@ img {
         height: 480px;
     }
 
-    .slide-caption {
-        width: 65%;
-        font-size: 1.5rem;
-    }
 }
 
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
@@ -210,11 +200,6 @@ img {
     .slider,
     .slider-wrapper {
         height: 360px;
-    }
-
-    .slide-caption {
-        width: 75%;
-        font-size: 1.25rem;
     }
 }
 
