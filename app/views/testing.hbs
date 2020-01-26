@@ -1,4 +1,6 @@
 <main>
+
+
     {{!-- slider with images --}}
 
     <div class="slider-wrapper">
@@ -47,18 +49,21 @@
 
 
 
+
+
     {{!-- description boxes  --}}
 
     <section class="wrapper">
-        <div class="parent">
+        <div class="title-page">
             <div class="jumbotron">
                 <h1>Find a Chef</h1>
             </div>
         </div>
     </section>
 
+
     <section class="wrapper">
-        <div class="parent2">
+        <div class="description-boxes">
             <div class="child">SEARCH
                 <div class="image"><img
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLT4ik4oH11Dr4d8H8CWAcacAIsSnqI28yYjjK3STg2HjXJyzGOQ&s"
@@ -97,28 +102,52 @@
         </div>
     </section>
 
+
+
+
+
+
+
+    {{!-- spot for Herman's search bar --}}
+    <section class="wrapper">
+        <div class="search-container">
+            <div class="search-bar">
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
     {{!-- container containing chef info  --}}
 
     <div class="container" id="appended-chefs">
         <section class="chef-info">
-            <div class="parent3">
+            <div class="chef-info-container">
                 <div class="child-chef">
                     <h3>Miley</h3>
                     <p>Price:</p>
                     <p>Cuisine:</p>
                     <div class="chef-image">
                         <i class="fas fa-user-circle"></i>
-
-                        {{!-- <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYd-7GYSGWtLAJ3sUGoRNAqqck1-RkJBHsYLuSgKMpLpO60OEE&s"
-                            width="65px" height="65px"> --}}
                     </div>
                     <div class="rating">
                         <i class="fas fa-cookie-bite"></i><i class="fas fa-cookie-bite"></i><i
                             class="fas fa-cookie-bite"></i><i class="fas fa-cookie-bite"></i><i
                             class="fas fa-cookie-bite"></i>
                     </div>
-                    <button class="viewbtn">Request</button>
+                    <div class="btn-container">
+                        <button class="request-btn" "mr-5">Request</button>
+                    </div>
+
                 </div>
                 <div class="child-chef">
                     <h3>Herms</h3>
@@ -132,10 +161,10 @@
                             class="fas fa-cookie-bite"></i><i class="fas fa-cookie-bite"></i><i
                             class="fas fa-cookie-bite"></i>
                     </div>
-                    <button class="viewbtn">Request</button>
+                    <div class="btn-container">
+                        <button class="request-btn" "mr-5">Request</button>
+                    </div>
                 </div>
-
-
 
                 <div class="child-chef">
                     <h3>Larry</h3>
@@ -149,7 +178,9 @@
                             class="fas fa-cookie-bite"></i><i class="fas fa-cookie-bite"></i><i
                             class="fas fa-cookie-bite"></i>
                     </div>
-                    <button class="viewbtn"><span>Request</span></button>
+                    <div class="btn-container">
+                        <button class="request-btn" "mr-5">Request</button>
+                    </div>
                 </div>
             </div>
         </section>
