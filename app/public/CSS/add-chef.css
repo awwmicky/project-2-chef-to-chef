@@ -5,6 +5,10 @@ input: .price-input
 input: .cuisine-input
 input: .post-input
 */
+main{
+    background-image: url(../images/other/img1.jpg);
+    object-fit: cover;
+}
 
 .container {
     display: flex;
@@ -13,18 +17,11 @@ input: .post-input
     margin-top: 25px;
 }
 
-.fa-user{
-    padding: 15px;
-    background-color: greenyellow;
-    color: black;
+.form-header{
+    color: whitesmoke;
 }
 
-.fa-dollar-sign{    
-    padding: 18px;
-    background-color: greenyellow;
-    color: black;}
-
-.add-chef {
+.add-chef{
     display: flex;
     flex-flow: wrap;
     border: 2px solid black;
@@ -52,4 +49,25 @@ input {
 .post-input:hover {
     color: greenyellow;
     background-color: orange;
+}
+
+.add-chef-image{
+    display: flex;
+    border-radius: 20px;
+    object-fit: cover;
+    width: 250px;
+
+}
+
+.image-container{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.chef-image{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
 }

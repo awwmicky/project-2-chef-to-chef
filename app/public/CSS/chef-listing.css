@@ -1,29 +1,16 @@
-.chef-listing {
-    border: 1px solid grey;
+.chef-image{
+    object-fit: scale-down;
+    display: flex;
+    width: 100vw;
+    height: 350px;
+}
+
+h2{
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    flex-direction: column;
+    align-content: center;
 }
 
-.chef-list {
-    border: 1px solid black;
-    background-color:grey;
-    margin: 10px;
-    height: 50px;
-    width: 150px;
-}
-
-
-
-.chef-name {
-    color: orange;
-}
-
-.chef-price {
-    color: greenyellow;
-}
 
 /*
 template literals:

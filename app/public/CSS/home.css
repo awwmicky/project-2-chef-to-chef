@@ -1,37 +1,27 @@
-.container {
+.main-image{
     display: flex;
-    justify-content: center;
-    text-align: center;
+    object-fit: cover;
+    width: 100vw;
+    height: 450px;
 }
 
-.form-container {
-    background-color: grey;
-    border: 2px solid black;
+
+.form-section{
     display: flex;
-    flex-flow: wrap;
-    max-width: 100%;
-    margin-top: 30px;
-    border-radius: 25px;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.container {
+    display: flex;
+    text-align: center;
+    border: 2px solid black;    
 }
 
 select {
     margin: 10px;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.form-column {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    flex-basis: 100%;
-    flex: 1;
-}
 
 .chef-data-form {
     display: flex;
@@ -62,21 +52,6 @@ select {
     display: flex;
 }
 
-.btn-column {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    flex-basis: 100%;
-    flex: 1;
-}
-
-.btn {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
-}
-
-
 #submitBtn:hover {
     background-color: orange;
     color: black;
@@ -93,12 +68,18 @@ select {
     border-radius: 25px;
 }
 
+
+.results{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #showChef{
-    border: 1px solid black;
+    border: 2px solid black;
     background-color:grey;
-    opacity: 0.75;
     margin: 10px;
-    height: 100px;
+    height: 150px;
     width: 150px;
     flex-wrap: wrap;
     display: flex;
@@ -108,6 +89,7 @@ select {
     color: orange;
     flex-wrap: wrap;
     display: flex;
+    text-align: center;
 }
 
 #chefPrice{
@@ -122,12 +104,6 @@ select {
     display: flex;
 }
 
-.results{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-
 
 /* 
 = template literal =
@@ -136,3 +112,4 @@ select {
 - p: #chefPrice
 - p: #chefCuisine
 */
+
