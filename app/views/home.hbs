@@ -1,35 +1,101 @@
 <main>
-    <div class="container">
-        <form class="chef-data-form">
-            <select name="location" class="location-input">
-                <option value="location" selected disabled>Location</option>
-                <option value="x">Bay Area</option>
-            </select>
-            <br>
-            <select name="cuisine" class="cuisine-input">
-                <option value="cuisine" selected disabled>Choose A Cuisine</option>
-                <option value="mexican">Mexican</option>
-                <option value="chinese">Chinese</option>
-                <option value="american">American</option>
-            </select>
-            <br>
-            {{!-- <label for="price">Choose a price range</label> --}}
-            <select name="price" class="price-input">
-                <option value="x" selected disabled>Select A Price Range</option>
-                <option value="1">$</option>
-                <option value="2">$$</option>
-                <option value="3">$$$</option>
-            </select>
+    <div class="container-wrapper">
 
-            <div class="btn">
-                {{!-- <label for="submit">Find that chef</label> --}}
-                <input name="submit" id="submitBtn" type="submit" value="Find my chef!">
+        {{!-- description boxes  --}}
+
+        <section class="wrapper">
+            <div class="title-page">
+                <h1 class="header">Find a Chef</h1>
             </div>
-        </form>
+            {{!-- </section>
+
+
+    <section class="wrapper"> --}}
+            <div class="description-boxes">
+                <div class="description-item">SEARCH
+                    <div class="image"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLT4ik4oH11Dr4d8H8CWAcacAIsSnqI28yYjjK3STg2HjXJyzGOQ&s"
+                            width="65px" height="65px">
+                    </div>
+                    <p>Use the tool below to search our Chef roster.</p>
+                </div>
+                <div class="description-item">REQUEST
+                    <div class="image"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLtUdwDhlIVwrnkAGg5ETxm981otZ44stA9QwJYgRpUMb3UsmXTg&s"
+                            width="65px" height="65px">
+                    </div>
+                    <p>Submit the request by providing details such as desired cuisine type,
+                        price range and location.
+                    </p>
+                </div>
+                <div class="description-item">REVIEW
+                    <div class="image"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXi3GxCvKohuIFYkpSVudWPxqaSHu782p4Vm6uje0OKUDFEFBcIw&s"
+                            width="65px" height="65px">
+                    </div>
+                    <p>
+                        Our team will send you your custom Meal Summary for final
+                        review and confirmation.
+                    </p>
+                </div>
+                <div class="description-item">CONFIRMATION
+                    <div class="image"><img src="https://image.flaticon.com/icons/svg/809/809485.svg" width="65px"
+                            height="65px">
+                    </div>
+                    <p>
+                        Once you are satisfied with your selection, submit payment
+                        to hire your own Personal Chef!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        {{!-- <div>
+        <div class="justify-content">
+            <img src="/images/other/img2.jpg" class="main-image">
+        </div>
+    </div> --}}
+
+        <!--Beginning of Find a Chef Instructions Section -->
+
+        <!--End of Find a Chef Instructions Section -->
+
+
+        <!-- Find my chef form   -->
+        <section class="form-section">
+            <form class="chef-data-form">
+                <div class="form-option">
+                    <select name="location" class="location-input">
+                        <option value="location" selected disabled>Pick A Location</option>
+                        <option value="x">Bay Area</option>
+                    </select>
+                    <select name="cuisine" class="cuisine-input">
+                        <option value="cuisine" selected disabled>Choose A Cuisine</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="american">American</option>
+                    </select>
+                    {{!-- <label for="price">Choose a price range</label> --}}
+                    <select name="price" class="price-input">
+                        <option value="x" selected disabled>Select A Price Range</option>
+                        <option value="1">$</option>
+                        <option value="2">$$</option>
+                        <option value="3">$$$</option>
+                    </select>
+                </div>
+                <div class="form-button">
+                    {{!-- <label for="submit">Find that chef</label> --}}
+                    <input name="submit" id="submitBtn" type="submit" value="Find My Chef!">
+                </div>
+            </form>
+        </section>
+        <!--  End of find my chef form  -->
+
+        <section class="search-chef-listing">
+
+        </section>
     </div>
 
-    <section class="results"></section>
 
 
 </main>
-<!--     -->

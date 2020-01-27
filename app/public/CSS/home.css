@@ -1,44 +1,87 @@
-.container {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.wrapper{
+    border: 2px solid black;
+    min-height: 40vh;
 }
 
-.form-container {
-    background-color: grey;
-    border: 2px solid black;
+h1.header{
+    text-align: center;
+    margin-top: 15px; 
+    margin-bottom: 15px;
+    font-size: 30pt;
+    
+}
+/* container that contains 4 description boxes  */
+.description-boxes {
     display: flex;
-    flex-flow: wrap;
-    max-width: 100%;
-    margin-top: 30px;
+    /* width: 90%; */
+    justify-content: space-evenly;
+    border: 2px solid green;
+    background-color: white;
+    margin: auto;
+    min-height: 40vh;
+    flex-wrap: wrap;
+    align-items: center;
+}
+/* 4 boxes inside description-boxes,  */
+.description-item {
+    /* flex-grow: 2; */
+    border-style: solid;
+    border-color: rgb(214, 209, 209);
+    border-width: 1px;
+    text-align: center;
     border-radius: 25px;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    /* box-shadow: 5px 10px #b9b8b8; */
+    box-shadow: 0 0 20px rgb(146, 143, 143);
+}
+
+/* paragraph describing boxes */
+p {
+    font-family: 'Cairo', sans-serif;
+    font-size: 10pt;
+    margin-top: 15px;
+    /* border: 2px solid black; */
+}
+
+
+
+/* ----------------------------- */
+.main-image{
+    display: flex;
+    object-fit: cover;
+    width: 100vw;
+    height: 450px;
+}
+
+
+.form-section{
+    display: flex;
+    justify-content: center;
+    border: 2px solid blue;
+    min-height: 30vh;
+    align-items: center;
 }
 
 select {
     margin: 10px;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.form-column {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    flex-basis: 100%;
-    flex: 1;
-}
-
 .chef-data-form {
     display: flex;
-    flex-flow: wrap;
+    flex-flow: column;
     align-items: center;
     justify-content: center;
-    margin: 25px;
+    border: 2px solid black;  
+    min-height: 120px;
+}
+
+.form-option{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .location-input{
@@ -62,21 +105,6 @@ select {
     display: flex;
 }
 
-.btn-column {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    flex-basis: 100%;
-    flex: 1;
-}
-
-.btn {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
-}
-
-
 #submitBtn:hover {
     background-color: orange;
     color: black;
@@ -91,41 +119,73 @@ select {
     color: white;
     padding: 10px;
     border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-#showChef{
-    border: 1px solid black;
-    background-color:grey;
-    opacity: 0.75;
-    margin: 10px;
-    height: 100px;
-    width: 150px;
-    flex-wrap: wrap;
+
+/*--------Things Being Appended---------------------*/
+.search-chef-listing{
+    border: 2px solid red;
     display: flex;
+    justify-content: space-evenly;
 }
 
-#chefName {
-    color: orange;
-    flex-wrap: wrap;
-    display: flex;
+.search-chef-listing>div{
+    margin: 10px 0;
 }
-
-#chefPrice{
-    color: greenyellow;
-    flex-wrap: wrap;
-    display: flex;
-}
-
-#chefCuisine{
-    color: greenyellow;
-    flex-wrap: wrap;
-    display: flex;
-}
-
-.results{
+/* child of chef-info-conatiners */
+.chef-container {
+    border-style: solid;
+    border-color: rgb(233, 228, 228);
+    background-color: rgb(240, 234, 234);
+    padding: 10px;
+    width: 200px;
+    height: 100%;
+    border: 2px solid black;
     display:flex;
     align-items: center;
-    justify-content: center;
+    flex-flow: column;
+}
+
+.chef-container>div{
+    padding: 5px;
+}
+
+.chef-image {
+    width: 100px;
+    height: 100px;
+    border: 2px solid green;
+}
+
+/* cookie rating icon */
+.fa-cookie-bite {
+    color: rgb(110, 81, 18);
+    font-size: 15pt;
+    border: 1px solid blue;
+}
+
+/* container where cookies live */
+.rating {
+    border: 1px solid black;
+}
+
+/* profile icon in chef info */
+.fa-user-circle {
+    color: #108143;
+    font-size: 70pt;
+    border: 1px solid black;
+}
+
+.request-btn {
+    border: 1px solid;
+    border-color: rgb(226, 206, 170);
+    font: inherit;
+    font-weight: bold;
+    line-height: 0.5;
+    padding: 1em 2em;
+    text-align: center;
 }
 
 
@@ -136,3 +196,9 @@ select {
 - p: #chefPrice
 - p: #chefCuisine
 */
+
+@media only screen and (max-width: 480px) {
+    .description-item {
+        width: 400px;
+    }
+}
