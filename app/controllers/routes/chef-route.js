@@ -9,22 +9,22 @@ const { Chef } = require("../../models/");
 
 router.get("/all", (req, res) => {
     Chef
-    .findAll()
-    .then(allChefs => {
-        var chefs = parse.captureData(allChefs)
-        console.table(chefs);
+        .findAll()
+        .then((allChefs) => {
+            // var chefs = parse.captureData(allChefs)
+            console.log(allChefs)
 
-        res.send(chefs)
-    })
-    .catch((err) => {
-        console.log(err)
-    })
+            res.send(allChefs)
+        })
+        .catch((err) => {
+            console.log(err)
+        })
 });
 
 router.get("/search", (req, res) => {
     let cuisine = req.query.cuisine;
     let price = req.query.price;
-    console.log(`Front-End: ${cusine} - ${price}`)
+    console.log(`Back-End: ${cuisine} - ${price}`)
 
     let priceRange;
 
@@ -81,7 +81,7 @@ router.delete('/delete/:id', (req, res) => {
             where: {
                 id: req.params.id
             }
-        }).then( results => {
+        }).then(results => {
             res.send(results)
         })
 })
@@ -97,7 +97,7 @@ router.put('/update', (req, res) => {
             where: {
                 id: req.body.id
             }
-        }).then( results => {
+        }).then(results => {
             res.send(results)
         })
 })

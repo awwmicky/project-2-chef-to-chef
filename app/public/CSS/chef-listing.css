@@ -10,24 +10,102 @@ h2{
     justify-content: center;
     align-content: center;
 }
+.user-info{
+    border: 1px solid black;
+    padding: 5px;
+}
 
+.all-chef-listing{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.all-chef-listing>div{
+    margin: 10px 0;
+}
+/* child of chef-info-conatiners */
+.chef-container {
+    border-style: solid;
+    border-color: rgb(233, 228, 228);
+    background-color: rgb(240, 234, 234);
+    padding: 10px;
+    width: 200px;
+    height: 100%;
+    border: 2px solid black;
+    display:flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.chef-container>div{
+    padding: 5px;
+}
+
+.chef-image {
+    width: 100px;
+    height: 100px;
+    border: 2px solid green;
+}
+
+/* cookie rating icon */
+.fa-cookie-bite {
+    color: rgb(110, 81, 18);
+    font-size: 15pt;
+    border: 1px solid blue;
+}
+
+/* container where cookies live */
+.rating {
+    border: 1px solid black;
+}
+
+/* profile icon in chef info */
+.fa-user-circle {
+    color: #108143;
+    font-size: 70pt;
+    border: 1px solid black;
+}
+
+.request-btn {
+    border: 1px solid;
+    border-color: rgb(226, 206, 170);
+    font: inherit;
+    font-weight: bold;
+    line-height: 0.5;
+    padding: 1em 2em;
+    text-align: center;
+}
 /*
 template literals:
 div: .chef-list
 span: .chef-name
 span: .chef-price
 span: .chef-cuisine
-*/
+
+
+
 /*
-    `<div class="chef-list" data-id="${data[i].id}">
-        <span class="chef-name">
-            ${data[i].name}
-        </span>
-        <span class="chef-price">
-            ${data[i].price}
-        </span>
-        <span class="chef-cuisine">
-            ${data[i].cuisine}
-        </span>
-    </div>`
+        <div class="chef-container" data-id="${data.id}">
+            <div class="chef-photo-name">
+                <div class="chef-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+            <div class="chef-info-request">
+                <div class="user-info">
+                    <h3>Chef ${data.name}</h3>
+                    <p>Price: ${data.price}/Hr</p>
+                    <p>Cuisine: ${data.cuisine}</p>
+                </div>
+            </div>
+            <div class="rating">
+                <i class="fas fa-cookie-bite"></i><i class="fas fa-cookie-bite"></i><i class="fas fa-cookie-bite"></i><i
+                    class="fas fa-cookie-bite"></i><i class="fas fa-cookie-bite"></i>
+            </div>
+            <div class="btn-container">
+                <button class="request-btn" "mr-5">Request</button>
+            </div>
+        </div>
+
+
 */

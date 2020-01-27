@@ -40,14 +40,26 @@ input {
     margin: 10px;
     border-radius: 10px;
     text-size-adjust: 14px;
+    border-style: none;
 }
 
+select.cuisine-option{
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+
 .post-input{
-    background-color: greenyellow;
+    background-color: green;
+    color: white;
+    font-weight: bold;
 }
 
 .post-input:hover {
-    color: greenyellow;
+    color: black;
     background-color: orange;
 }
 
