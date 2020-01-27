@@ -5,21 +5,41 @@ $(() => {
     const $chefForm = $('.chef-data-form');
     const $cuisineInput = $('.cuisine-input');
     const $priceInput = $('.price-input');
-    const $results = $('.results');
+    const $searchChefListing = $('.search-chef-listing');
 
 
 
     renderChefData = (data) => {
-        $results.empty()
+        console.log(data);
 
-        data.forEach(info => {
-            $results.append(
+        $searchChefListing.empty()
 
-                `<div id="showChef" data-id="${info.id}">
-                    <h3 id="chefName">Chef ${info.name}</h3>
-                    <p id="chefPrice">price: ${info.price}/hr</p>
-                    <p id="chefCuisine">cuisine: ${info.cuisine}</p>
-                </div>`
+        data.forEach(chef => {
+            $searchChefListing.append(
+
+                `
+            <div class="chef-container" data-id="${chef.id}">
+                <div class="chef-photo-name">
+                    <div class="chef-image">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+                <div class="chef-info-request">
+                    <div class="user-info">
+                        <h3>Chef ${chef.name}</h3>
+                        <p>Price: $${chef.price}/Hr</p>
+                        <p>Cuisine: ${chef.cuisine}</p>
+                    </div>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-cookie-bite"></i><i class="fas fa-cookie-bite"></i><i class="fas fa-cookie-bite"></i><i
+                        class="fas fa-cookie-bite"></i><i class="fas fa-cookie-bite"></i>
+                </div>
+                <div class="btn-container">
+                    <button class="request-btn" "mr-5">Request</button>
+                </div>
+            </div>
+            `
             )
         })
     };

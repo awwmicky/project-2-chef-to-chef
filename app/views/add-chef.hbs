@@ -3,6 +3,7 @@
         <div class="add-chef">
             <form class="add-chef-form">
                 <h2 class="form-header">Add Your Chef!</h2>
+                <!--    Make it bigger        -->
                 <br>
                 <div class="input-container">
                     <input type="text" class="name-input" placeholder="Name" autofocus>
@@ -11,10 +12,26 @@
                     <input type="number" class="price-input" placeholder="Select Price Range">
                 </div>
                 <div class="input-container">
-                    <input type="text" class="cuisine-input" placeholder="Input Cuisine Type">
+                    <!--    Dropdown Fixed Cuisine Options (Chinese, Mexican, American)        -->
+                    <select name="Select A Cuisine" class="cuisine-option">
+                        <option value="x" selected disabled>Select A Cuisine Type</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Mexican">Mexican</option>
+                        <option value="American">American</option>
+                    </select>
+                </div>
+                <div class="input-container">
+                    <!--    Dropdown Fixed Cuisine Options (Chinese, Mexican, American)        -->
+                    <select name="Pick A Location" class="cuisine-option">
+                        <option value="x" selected disabled>Pick A Location</option>
+                        <option value="San Jose">San Jose</option>
+                        <option value="San Francisco">San Francisco</option>
+                        <option value="San Mateo">San Mateo</option>
+                    </select>
                 </div>
                 <div class="input-container">
                     <input type="submit" class="post-input" value="POST CHEF">
+                    <!--   Adjust Button Style, no border radius, make font bold         -->
                 </div>
             </form>
         </div>
