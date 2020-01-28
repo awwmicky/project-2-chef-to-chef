@@ -1,63 +1,153 @@
 header {
+    /* border: 2px solid green; */
     width: 100%;
 }
 header .container-wrapper {
-    background: white;
-    border: 2px solid black;
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-between;
+    /* border: 2px solid lightgreen; */
+    background: rgba(0, 0, 0, 0);
+
     position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
     max-width: 960px;
-    height: 100%;
+    height: 10;
     margin: 0 auto;
 }
 
-.project-header {
-    border: 2px solid red;
+.header-logo,
+/* .navbar, */
+.menu-bar
+{
+    /* min-height: 100%; */
+    height: 7vh;
+}
+
+.header-logo {
+    /* border: 2px solid red; */
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-width: auto;
-    height: 100%;
-    padding: 5px 10px;
+    /* height: 8vh; */
+    padding: 0 10px;
 }
-    .project-header i {
-        font-size: 1.5em;
-        padding-right: 5px;
-    }
-    .project-header h1 {
-        /* font-family: ; */
-        font-size: 1.5em;
-    }
-.navbar {
-    border: 2px solid green;
-}
-    .navbar ul {
-        display: flex;
-        height: 100%;
-    }
-    .navbar li {
-        /* display: flex; */
-        height: 100%;
-        cursor: pointer;
-        display: table;
-    }
-        .navbar li:hover {
-            background: darkgray;
-        }
-        .navbar li:active a {
-            background: darkgray;
-            color: white;
-        }
-    .navbar a {
+    .header-logo i {
         color: black;
-        /* font-family: ''; */
-        /* display: flex; */
-        /* align-items: center; */
-        display: table-cell;
-        vertical-align: middle;
-        height: 100%;
-        padding: 0 20px;
+        font-size: 1.5em;
+        padding: 0 5px;
+    }
+    .header-logo h1 {
+        color: black;
+        font-size: 1.5em;
+        padding: 0 5px;
     }
 /*  */
+.navbar {
+    /* border: 2px solid red; */
+    box-shadow: 0 15px 15px rgb(146, 143, 143);
+    
+    position: absolute;
+    top: 100%;
+    /* left: 0; */
+    right: 0;
+
+    width: 200px;
+
+    display: none;
+}
+    .navbar ul {
+        /* border: 2px solid blue; */
+
+        display: flex;
+        flex-flow: column;
+        
+        height: 100%;
+    }   
+    .navbar li {
+        /* border: 2px solid lightblue; */
+    }
+    .navbar a {
+        background: white;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        /* border: 2px solid green; */
+        /* color: white; */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* width: 100%; */
+        height: 100%;
+        padding: 10px 0;
+    }
+    .navbar a:hover {
+        background: lightgreen;
+        color: black;
+    }
+.menu-bar {
+    cursor: pointer;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+
+    /* display: none; */
+}
+    .nav-btn,
+    .exit-btn
+    {
+        /* border: 2px solid pink; */
+        color: black;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    .exit-btn {
+        display: none;
+    }
+        .nav-btn:hover,
+        .exit-btn:hover
+        {
+            color: gray;            
+        }
+        .nav-btn:active,
+        .exit-btn:active
+        {
+            color: black;
+        }
+    .menu-bar i {
+        color: black;
+        font-size: 1.5em;
+        padding: 0 10px;
+    }
+/*  */
+
+
+
+/*  */
+/* .active-nav { */
+    /* left: 0; */
+/* } */
+.active-flex {
+    display: flex;
+}
+.active-block {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+/*  */
+
+
+
+/*  */
+@media screen and (max-width: 335px) {
+    .header-logo h1 {
+        display: none;
+    }
+    .navbar {
+        width: 100%;
+    }
+}

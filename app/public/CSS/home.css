@@ -1,5 +1,5 @@
 .wrapper{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     min-height: 40vh;
 }
 
@@ -15,7 +15,7 @@ h1.header{
     display: flex;
     /* width: 90%; */
     justify-content: space-evenly;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     background-color: white;
     margin: auto;
     min-height: 40vh;
@@ -60,7 +60,7 @@ p {
 .form-section{
     display: flex;
     justify-content: center;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     min-height: 30vh;
     align-items: center;
 }
@@ -74,7 +74,7 @@ select {
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid black;  
+    /* border: 2px solid black;   */
     min-height: 120px;
 }
 
@@ -127,7 +127,7 @@ select {
 
 /*--------Things Being Appended---------------------*/
 .search-chef-listing{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     justify-content: space-evenly;
 }
@@ -167,26 +167,35 @@ select {
 }
 
 /* container where cookies live */
-.rating {
-    border: 1px solid black;
-}
+/* .rating { */
+    /* border: 1px solid black; */
+/* } */
 
 /* profile icon in chef info */
 .fa-user-circle {
     color: #108143;
     font-size: 70pt;
-    border: 1px solid black;
+    text-align: center;
+    /* border: 1px solid black; */
+    width: 100%;
+
 }
 
 .request-btn {
-    border: 1px solid;
-    border-color: rgb(226, 206, 170);
-    font: inherit;
+    border: 1px solid rgb(226, 206, 170);
+    background: #108143;
+    color: rgb(240, 234, 234);
     font-weight: bold;
     line-height: 0.5;
     padding: 1em 2em;
     text-align: center;
+    cursor: pointer;
 }
+.request-btn:hover {
+    background: orange;
+    color: black;
+}
+
 
 
 /* 

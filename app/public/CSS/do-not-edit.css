@@ -1,1 +1,17 @@
 /* edit */
+
+/* main { */
+    /* background-image: url(../images/other/img1.jpg); */
+    /* object-fit: cover; */
+/* } */
+
+.chef-image {
+    object-fit: scale-down;
+    display: flex;
+    width: 100vw;
+    height: 350px;
+}
+
+.error-text {
+    text-align: center;
+}

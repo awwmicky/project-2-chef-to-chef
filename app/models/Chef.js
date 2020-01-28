@@ -1,20 +1,24 @@
 module.exports = function (sequelize, DataTypes) {
     const Chef_Model = sequelize.define("Chef", {
-        // Giving the Chef model a name of type STRING
+        /* Chef field - name & price */
         name: DataTypes.STRING,
         price: DataTypes.INTEGER,
-        cuisine: DataTypes.STRING
+        // title: DataTypes.STRING,
+        // is_requested: DataTypes.BOOLEAN,
+        // is_approved: DataTypes.BOOLEAN
+        
+        // cuisine: DataTypes.STRING
     });
 
     console.log(Chef_Model);
 
-    // Chef_Model.associate = function (models) {
-    //     Chef_Model.belongsTo(models.Cuisine, {
-    //         foreignKey: {
-    //             allowNull: false
-    //         }
-    //     });
-    // };
+    /* many-to-many relations through middle table */
+    Chef_Model.associate = (models) => {
+        Chef_Model.belongsToMany(models.Cuisine, {
+            through: 'Chefs_and_Cuisines',
+            timestamps: false
+        })
+    };
 
     return Chef_Model;
 };

@@ -1,26 +1,27 @@
-.chef-image{
+.chef-image {
     object-fit: scale-down;
     display: flex;
     width: 100vw;
     height: 350px;
 }
 
-h2{
+h2 {
     display: flex;
     justify-content: center;
     align-content: center;
 }
-.user-info{
+
+.user-info {
     border: 1px solid black;
     padding: 5px;
 }
 
-.all-chef-listing{
+.all-chef-listing {
     display:flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.all-chef-listing>div{
+.all-chef-listing>div {
     margin: 10px 0;
 }
 /* child of chef-info-conatiners */
@@ -37,7 +38,7 @@ h2{
     flex-flow: column;
 }
 
-.chef-container>div{
+.chef-container>div {
     padding: 5px;
 }
 
@@ -63,18 +64,29 @@ h2{
 .fa-user-circle {
     color: #108143;
     font-size: 70pt;
-    border: 1px solid black;
+    text-align: center;
+    /* border: 1px solid black; */
+    width: 100%;
 }
 
 .request-btn {
-    border: 1px solid;
-    border-color: rgb(226, 206, 170);
-    font: inherit;
+    border: 1px solid rgb(226, 206, 170);
+    background: #108143;
+    color: rgb(240, 234, 234);
     font-weight: bold;
     line-height: 0.5;
     padding: 1em 2em;
     text-align: center;
+    cursor: pointer;
 }
+
+.request-btn:hover {
+    background: orange;
+    color: black;
+}
+
+
+
 /*
 template literals:
 div: .chef-list

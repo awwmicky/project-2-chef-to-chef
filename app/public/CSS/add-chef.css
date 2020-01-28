@@ -5,27 +5,24 @@ input: .price-input
 input: .cuisine-input
 input: .post-input
 */
-main{
-    background-image: url(../images/other/img1.jpg);
-    object-fit: cover;
-}
+
 
 .container {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 25px;
+    margin: 30px 0;
 }
 
-.form-header{
-    color: whitesmoke;
+.form-header {
+    color: black;
 }
 
 .add-chef{
     display: flex;
     flex-flow: wrap;
     border: 2px solid black;
-    background-color:grey;
+    /* background-color:grey; */
     border-radius: 20px;
 }
 
@@ -35,7 +32,7 @@ main{
     padding: 50px;
 }
 
-input {
+.post-input {
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
@@ -43,16 +40,33 @@ input {
     border-style: none;
 }
 
-select.cuisine-option{
-    height: 50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 150px;
-    border-radius: 10px;
+.name-input,
+.price-input,
+.cuisine-option
+{
+    padding: 20px;
+    margin: 10px;
+    /* border-radius: 10px; */
+    text-size-adjust: 14px;
+    border-style: none;
+    border-bottom: 2px solid gray;
+    width: 200px;
 }
 
 
-.post-input{
+
+select.cuisine-option,
+select.title-option,
+select.location-option
+{
+    height: 60px;
+    /* margin-top: 10px; */
+    /* margin-bottom: 10px; */
+    /* width: 150px; */
+    /* border-radius: 10px; */
+}
+
+.post-input {
     background-color: green;
     color: white;
     font-weight: bold;
@@ -63,7 +77,7 @@ select.cuisine-option{
     background-color: orange;
 }
 
-.add-chef-image{
+.add-chef-image {
     display: flex;
     border-radius: 20px;
     object-fit: cover;
@@ -71,13 +85,13 @@ select.cuisine-option{
 
 }
 
-.image-container{
+.image-container {
     display:flex;
     justify-content: center;
     align-content: center;
 }
 
-.chef-image{
+.chef-image {
     height: 50%;
     width: 50%;
     display: flex;

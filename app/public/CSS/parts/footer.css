@@ -1,17 +1,38 @@
 footer {
-    background: gray;
+    background: #108143;
     width: 100%;
     margin-top: auto;
     /* color: white; */
 }
 footer .container-wrapper {
-    border: 2px solid black;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+    /* border: 2px solid rgb(253, 244, 244); */
+
+    display: grid;
+    grid-template-areas: 
+        "title contribution"
+        "copyright contribution"
+    ;
+
     max-width: 960px;
     height: 100%;
     margin: 0 auto;
+    padding: 5px 0;
+}
+
+.order-1 {
+    grid-area: title;
+    /* border: 2px solid silver; */
+    text-align: center;
+}
+.order-2 {
+    grid-area: contribution;
+    /* border: 2px solid silver; */
+    text-align: center;
+}
+.order-3 {
+    grid-area: copyright;
+    /* border: 2px solid silver; */
+    text-align: center;
 }
 
 .project-title-sm a {
@@ -22,13 +43,9 @@ footer .container-wrapper {
 .project-title-sm a:active {
     color: black;
 }
-.github-link {
-    border: 2px solid gold;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-}
+/* .github-link { */
+    /* border: 2px solid gold; */
+/* } */
     .github-link h4 {
         color: white;
     }
@@ -36,6 +53,7 @@ footer .container-wrapper {
         border: 2px solid black;
         border-radius: 1.5em;
         color: white;
+        font-size: 25pt;
     }
     .github-link i:hover {
         border: 2px solid white;
@@ -43,22 +61,21 @@ footer .container-wrapper {
         color: purple;
     }
 .contribution-members {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
     width: 100%;
 }
     .contribution-members h5 {
         color: white;
-        text-align: center;
     }
-    .contribution-members nav {
-        border: 2px solid lightblue;
-        width: 100%;
-    }
-        .contribution-members ul {
-            display: flex;
-            flex-flow: wrap;
-            justify-content: space-evenly;
-        }
+    /* .contribution-members nav { */
+        /* border: 2px solid lightblue; */
+    /* } */
+        /* .contribution-members ul { */
+            /* border: 2px solid silver; */
+        /* } */
         .contribution-members li {
             padding: 0 15px;
         }
@@ -76,3 +93,15 @@ footer .container-wrapper {
     color: white;
 }
 /*  */
+
+
+
+@media only screen and (max-width: 460px) {
+    footer .container-wrapper {
+        grid-template-areas: 
+        "title"
+        "contribution"
+        "copyright"
+    ;
+    }
+}

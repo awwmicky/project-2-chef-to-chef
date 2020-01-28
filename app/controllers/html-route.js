@@ -34,13 +34,13 @@ router.get("/chef-listing", (req, res) => {
 })
 
 /*  */
-router.get("/testing", (req, res) => {
-    console.log('— Testing Page —')
+router.get("/do-not-edit", (req, res) => {
+    console.log('— DO NOT Page —')
 
-    res.render("testing.hbs", {
-        title: 'Testing Page',
-        style: 'testing.css',
-        script: 'testing.js'
+    res.render("do-not-edit.hbs", {
+        title: 'DO NOT Page',
+        style: 'do-not-edit.css',
+        script: 'do-not-edit.js'
     })
 })
 /*  */
@@ -57,7 +57,14 @@ router.get("/do-not-edit", (req, res) => {
 
 router.get('*', (req,res) => {
     // console.log('— NO Page —')
-    res.send('Page Not Found')
+    // res.send('Page Not Found')
+    console.log('— ERROR Page —')
+    
+    res.render("do-not-edit.hbs", {
+        title: 'ERROR Page',
+        style: 'do-not-edit.css',
+        script: 'do-not-edit.js'
+    })
 })
 
 
