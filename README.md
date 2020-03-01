@@ -32,16 +32,20 @@ Also, we can link recipes with chef's specialities.
 
 ### Clone Repo Setup:
 
-- npm init & npm install
-- create an `.env` file
-    - `DB_USER_LOCAL = [ username ]`
-    - `DB_PASS_LOCAL = [ password ]`
-    - `DB_HOST_LOCAL = [ hostname ]`
+- `npm init` & `npm install`
+    - open terminal/git-bash
+    - execute init, then install
+- create an `.env` file (remove quotes)
+    - `DB_USER_LOCAL = "username"`
+    - `DB_PASS_LOCAL = "password"`
+    - `DB_NAME_LOCAL = "database"`
+    - `DB_HOST_LOCAL = "hostname"`
 - execute `schema.sql` file
-    - open mySQL workbench
+    - go to `./app/database/schema.sql`
+    - open file on mySQL workbench
     - connect to Local instance
-    - higlight all code (2 lines)
+    - highlight all code (2 lines)
     - run code (once)
         - `CTRL + SHIFT + ENTER`
-- once all 3 three is complete...
+- once all 3 three is complete:
     - npm run dev

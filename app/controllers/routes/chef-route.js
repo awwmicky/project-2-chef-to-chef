@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router()
+const router = express.Router();
 
 const parse = require('../../custom/parse');
 const { Op } = require("../../models/").Sequelize;

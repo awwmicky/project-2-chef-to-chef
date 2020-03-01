@@ -16,14 +16,15 @@
         - for each file: HBS | CSS | JS
         - e.g: `home.hbs` | `home.css` | `home.js`
     - res.render( '[ file-name ].hbs', { [ obj-data ] } )
-        - e.g:
-        `
-        res.render('home.hbs', {
-            title: 'home',
-            style: 'home.css',
-            script: home.js 
-        })
-        `
+```js
+router.get('/home', (req, res) => {    
+    res.render('home.hbs', {
+        title: 'home page',
+        style: 'home.css',
+        script: 'home.js'
+    })
+})
+```
 
 ## Back-End
 

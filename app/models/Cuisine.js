@@ -1,6 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    const Cuisine_Model = sequelize.define("Cuisine", {
-        /* Cuisine field - type */
+    const Cuisine_Model = sequelize.define('Cuisine', {
         type: {
             type: DataTypes.STRING,
         }
@@ -8,7 +7,6 @@ module.exports = function (sequelize, DataTypes) {
 
     console.log(Cuisine_Model)
 
-    /* many-to-many relations through middle table */
     Cuisine_Model.associate = (models) => {
         Cuisine_Model.belongsToMany(models.Chef, {
             through: 'Chefs_and_Cuisines',
