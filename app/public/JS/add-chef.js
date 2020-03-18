@@ -22,12 +22,13 @@ $(() => {
             url: 'api/chef/create',
             data: dataInput
         })
-            .then( dataOutput => {
-                console.log(dataOutput)
-            })
-            .catch( err => {
-                console.log(err)
-            })
+        .then( dataOutput => {
+            console.log(dataOutput)
+            window.location.replace('/chef-listing')
+        })
+        .catch( err => {
+            console.log(err)
+        })
     })
     /*  */
 })

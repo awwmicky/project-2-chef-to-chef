@@ -3,7 +3,6 @@
         <div class="add-chef">
             <form class="add-chef-form">
                 <h2 class="form-header">Add Your Chef!</h2>
-                <!--    Make it bigger        -->
                 <br>
                 <div class="input-container">
                     <input 
@@ -13,6 +12,7 @@
                         placeholder="Your Name"
                         autocomplete="off" 
                         autofocus
+                        required
                     />
                 </div>
                 <div class="input-container">
@@ -25,6 +25,7 @@
                         min="10"
                         max="100"
                         step="10"
+                        required
                     />
                 </div>
                 <div class="input-container">
@@ -35,7 +36,8 @@
                         <option value="american">American</option>
                     </select>
                 </div>
-                {{!-- <div class="input-container">
+                {{!-- 
+                <div class="input-container">
                     <select name="Pick A Title" class="title-option">
                         <option value="x" selected disabled>Pick A Title</option>
                         <option value="Personal Chef">Personal Chef</option>
@@ -50,7 +52,8 @@
                         <option value="San Francisco">San Francisco</option>
                         <option value="San Mateo">San Mateo</option>
                     </select>
-                </div> --}}
+                </div> 
+                --}}
                 <div class="input-container">
                     <input type="submit" class="post-input" value="POST CHEF">
                 </div>

@@ -133,6 +133,7 @@ router.post("/create", (req, res) => {
         .then( results => {
             console.log(results)
             res.send(results)
+            // res.redirect('/')
         })
         .catch( err => {
             console.log(err)
